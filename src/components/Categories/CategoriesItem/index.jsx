@@ -1,6 +1,6 @@
 import { Container, Image, Info, Title, Button } from "./styled";
 
-const index = ({ item }) => {
+const CategoriesItem = ({ item }) => {
   return (
     <Container>
       <Image src={item.img} />
@@ -12,4 +12,4 @@ const index = ({ item }) => {
   );
 };
 
-export default index;
+export default CategoriesItem;

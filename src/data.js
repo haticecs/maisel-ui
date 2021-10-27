@@ -51,7 +51,7 @@ export const popularProducts = [
   },
   {
     id: 3,
-    img: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    img: "https://www.vintageindustries.nl/download_front/spokgn1516/_overview_large_/3019_Basing_hooded_sweater_Charcoal_2_.png",
   },
   {
     id: 4,
@@ -67,7 +67,7 @@ export const popularProducts = [
   },
   {
     id: 7,
-    img: "https://www.vintageindustries.nl/download_front/qympzk1762/2217_Arrow_Jacket_Forest.png",
+    img: "https://www.vintageindustries.nl/download_front/wlyfom1580/3538_Austin_shirt_Blue_Check.png",
   },
   {
     id: 8,

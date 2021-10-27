@@ -7,7 +7,7 @@ const Container = styled.div`
   padding: 20px;
 `;
 
-const index = () => {
+const Categories = () => {
   return (
     <Container>
       {categories.map((item) => (
@@ -17,4 +17,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Categories;
