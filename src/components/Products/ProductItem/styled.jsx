@@ -12,7 +12,8 @@ With flex and positioning we justify Icons in the center.
   bottom: 0;
   justify-content: center;
   align-items: center;
-  background-color: #f5fbfd;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.5 ease;
   z-index: 3;
   cursor: pointer;
 `;
@@ -30,7 +31,7 @@ export const Container = styled.div`
 
   /* Icons(Info) will appear only when the container is hovered */
   &:hover ${Info} {
-    opacity: 0.8;
+    opacity: 1;
   }
 `;
 
@@ -54,7 +55,7 @@ export const Icon = styled.div`
   height: 40px;
   border-radius: 50%;
   background-color: white;
-  margin: 3px;
+  margin: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,6 +63,6 @@ export const Icon = styled.div`
 
   /* When it is hovered, the icons will be bigger */
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
   }
 `;
