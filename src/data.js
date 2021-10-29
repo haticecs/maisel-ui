@@ -74,3 +74,30 @@ export const popularProducts = [
     img: "https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
   },
 ];
+
+export const singleProductImages = [
+  {
+    id: 1,
+    img: "https://i.ibb.co/ZWpmVkC/jacket1.jpg",
+  },
+  {
+    id: 2,
+    img: "https://i.ibb.co/FJX9jhQ/jacket.jpg",
+  },
+  {
+    id: 3,
+    img: "https://i.ibb.co/y4rbGkH/jacket3.jpg",
+  },
+  {
+    id: 4,
+    img: "https://i.ibb.co/yVgqrkQ/jacket4.jpg",
+  },
+  {
+    id: 5,
+    img: "https://i.ibb.co/m8JtG4G/jacket5.jpg",
+  },
+  {
+    id: 6,
+    img: "https://i.ibb.co/r6f2m2Q/jacket6.jpg",
+  },
+];
