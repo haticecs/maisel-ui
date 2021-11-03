@@ -1,26 +1,28 @@
 import styled from "styled-components";
+import { mobile } from "../../responsive";
 
-export const Container = styled.div`
+const Container = styled.div`
   display: flex;
+  ${mobile({ flexDirection: "column" })}
 `;
-export const Left = styled.div`
+const Left = styled.div`
   flex: 1;
   padding: 20px;
 `;
-export const Logo = styled.h1`
+const Logo = styled.h1`
   margin-bottom: 20px;
 `;
 
-export const Desc = styled.p`
+const Desc = styled.p`
   margin-bottom: 20px;
   font-weight: 500;
 `;
 
-export const SocialIconContainer = styled.div`
+const SocialIconContainer = styled.div`
   display: flex;
 `;
 
-export const SocialIcon = styled.div`
+const SocialIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,15 +40,16 @@ export const SocialIcon = styled.div`
   }
 `;
 
-export const Center = styled.div`
+const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ display: "none" })}
 `;
-export const Title = styled.h3`
+const Title = styled.h3`
   margin-bottom: 20px;
 `;
 
-export const List = styled.ul`
+const List = styled.ul`
   display: flex;
   margin: 0;
   padding: 0;
@@ -54,7 +57,7 @@ export const List = styled.ul`
   list-style: none;
 `;
 
-export const ListItem = styled.li`
+const ListItem = styled.li`
   width: 50%;
   margin-bottom: 10px;
   font-weight: 500;
@@ -67,17 +70,34 @@ export const ListItem = styled.li`
   }
 `;
 
-export const Right = styled.div`
+const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ backgroundColor: "#eee" })}
 `;
 
-export const ContactItem = styled.div`
+const ContactItem = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 `;
 
-export const Payments = styled.img`
+const Payments = styled.img`
   width: 50%;
 `;
+
+export {
+  Container,
+  Left,
+  Center,
+  Right,
+  Logo,
+  Desc,
+  SocialIconContainer,
+  SocialIcon,
+  Title,
+  List,
+  ListItem,
+  ContactItem,
+  Payments,
+};

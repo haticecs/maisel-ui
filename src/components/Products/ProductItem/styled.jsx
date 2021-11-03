@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 /* info covers whole area of container. 
 With flex and positioning we justify Icons in the center.
- */ export const Info = styled.div`
+ */
+const Info = styled.div`
   opacity: 0;
   display: flex;
   width: 100%;
@@ -18,7 +19,7 @@ With flex and positioning we justify Icons in the center.
   cursor: pointer;
 `;
 
-export const Container = styled.div`
+const Container = styled.div`
   flex: 1;
   margin: 5px;
   height: 350px;
@@ -35,7 +36,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Circle = styled.div`
+const Circle = styled.div`
   position: absolute;
   width: 200px;
   height: 200px;
@@ -44,13 +45,13 @@ export const Circle = styled.div`
   z-index: 1;
 `;
 
-export const Image = styled.img`
+const Image = styled.img`
   position: absolute;
   height: 75%;
   z-index: 2;
 `;
 
-export const Icon = styled.div`
+const Icon = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -66,3 +67,5 @@ export const Icon = styled.div`
     transform: scale(1.2);
   }
 `;
+
+export { Container, Circle, Image, Info, Icon };

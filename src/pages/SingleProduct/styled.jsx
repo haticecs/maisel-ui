@@ -1,26 +1,29 @@
 import styled from "styled-components";
+import { mobile } from "../../responsive";
 
-export const Container = styled.div``;
+const Container = styled.div``;
 
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   padding: 50px;
+  ${mobile({ flexDirection: "column", padding: "10px" })}
 `;
-export const ImageContainer = styled.div`
+const ImageContainer = styled.div`
   flex: 1;
   display: flex;
   height: 100vh;
   position: relative;
 `;
 
-export const Image = styled.img`
+const Image = styled.img`
   width: 100%;
   height: 100%;
+  ${mobile({ height: "40vh" })}
   object-fit: cover;
 `;
 
 /* direction prop to place the arrows in the sides of Image container.*/
-export const ArrowContainer = styled.div`
+const ArrowContainer = styled.div`
   position: absolute;
   display: flex;
   align-items: center;
@@ -44,45 +47,51 @@ export const ArrowContainer = styled.div`
   }
 `;
 
-export const InfoContainer = styled.div`
+const InfoContainer = styled.div`
   flex: 1;
   margin: 0px 50px;
+  ${mobile({ margin: "20px 10px" })}
 `;
 
-export const Title = styled.h1`
+const Title = styled.h1`
   font-size: 50px;
   font-weight: 300;
+  ${mobile({ fontSize: "30px", textAlign: "center" })}
 `;
 
-export const Desc = styled.p`
+const Desc = styled.p`
   font-size: 18px;
   font-weight: 400;
   margin: 30px 0px;
+  ${mobile({ margin: "20px 0px", fontSize: "14px" })}
 `;
 
-export const Price = styled.span`
+const Price = styled.span`
   font-size: 40px;
   font-weight: 200;
+  ${mobile({ fontSize: "30px" })}
 `;
 
-export const FilterContainer = styled.div`
+const FilterContainer = styled.div`
   display: flex;
   width: 70%;
   margin: 50px 0px;
   justify-content: space-between;
+  ${mobile({ margin: "40px 0px", width: "100%" })}
 `;
 
-export const Filter = styled.div`
+const Filter = styled.div`
   display: flex;
   align-items: center;
 `;
 
-export const FilterTitle = styled.span`
+const FilterTitle = styled.span`
   font-size: 20px;
   margin-right: 10px;
+  ${mobile({ fontSize: "16px" })}
 `;
 
-export const FilterColor = styled.div`
+const FilterColor = styled.div`
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -90,42 +99,45 @@ export const FilterColor = styled.div`
   border: 1px solid lightgray;
   margin-right: 10px;
   cursor: pointer;
+  ${mobile({ width: "20px", height: "20px" })}
 `;
 
-export const FilterSize = styled.select`
+const FilterSize = styled.select`
   padding: 5px 10px;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
 `;
 
-export const FilterSizeOption = styled.option``;
+const FilterSizeOption = styled.option``;
 
-export const AddContainer = styled.div`
+const AddContainer = styled.div`
   display: flex;
   align-items: center;
   width: 70%;
   margin: 50px 0px;
   justify-content: space-between;
+  ${mobile({ margin: "30px  0px", width: "100%" })}
 `;
 
-export const AmountContainer = styled.div`
+const AmountContainer = styled.div`
   display: flex;
   align-items: center;
   border: 2px solid lightgray;
 `;
 
-export const Amount = styled.span`
+const Amount = styled.span`
   width: 40px;
   text-align: center;
   font-weight: 500;
   font-size: 20px;
   margin: 0px 10px;
   padding: 10px;
+  ${mobile({ width: "20px", fontSize: "16px" })}
 `;
 
 /* borderDirection prop to border the sides properly in the inner of the container*/
-export const AmountIconContainer = styled.div`
+const AmountIconContainer = styled.div`
   display: flex;
   align-items: center;
   border-right: ${(props) =>
@@ -140,7 +152,7 @@ export const AmountIconContainer = styled.div`
   }
 `;
 
-export const AddButton = styled.button`
+const AddButton = styled.button`
   background-color: white;
   padding: 10px;
   font-weight: 600;
@@ -151,3 +163,26 @@ export const AddButton = styled.button`
     background-color: #f8f4f4;
   }
 `;
+
+export {
+  Container,
+  Wrapper,
+  ImageContainer,
+  Image,
+  InfoContainer,
+  Title,
+  Desc,
+  Price,
+  FilterContainer,
+  Filter,
+  FilterTitle,
+  FilterColor,
+  FilterSize,
+  FilterSizeOption,
+  AddContainer,
+  AmountContainer,
+  AmountIconContainer,
+  Amount,
+  AddButton,
+  ArrowContainer,
+};

@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { mobile } from "../../responsive";
 
-export const Container = styled.div`
+const Container = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -15,18 +16,19 @@ export const Container = styled.div`
 
 /* Wrapper width will change in the login and register pages
  */
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   background: white;
   padding: 20px;
   width: ${(props) => props.width};
+  ${mobile({ width: "75%" })}
 `;
 
-export const Title = styled.h1`
+const Title = styled.h1`
   font-size: 30px;
   font-weight: 300;
 `;
 
-export const Input = styled.input`
+const Input = styled.input`
   flex: 1;
   min-width: 40%;
   padding: 10px;
@@ -35,7 +37,7 @@ export const Input = styled.input`
 
 /* Login page has only two inputs that's why we can make it column direction
  */
-export const Form = styled.form`
+const Form = styled.form`
   display: flex;
   flex-wrap: ${(props) => props.type === "register" && "wrap"};
   flex-direction: ${(props) => props.type === "login" && "column"};
@@ -47,12 +49,12 @@ export const Form = styled.form`
   }
 `;
 
-export const Agreement = styled.p`
+const Agreement = styled.p`
   margin: 20px 0px;
   font-size: 18px;
 `;
 
-export const Button = styled.button`
+const Button = styled.button`
   margin: 10px 0px;
   width: 40%;
   border: none;
@@ -67,9 +69,11 @@ export const Button = styled.button`
   }
 `;
 
-export const Link = styled.a`
+const Link = styled.a`
   margin: 10px 0px;
   font-size: 14px;
   text-decoration: underline;
   cursor: pointer;
 `;
+
+export { Container, Wrapper, Title, Form, Input, Agreement, Button, Link };

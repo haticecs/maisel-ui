@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { mobile } from "../../../responsive";
 
 const ProductContainer = styled.div`
   display: flex;
+  ${mobile({ flexDirection: "column", padding: "10px" })}
 `;
 
 const Image = styled.img`
@@ -36,6 +38,7 @@ const PriceDetail = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  ${mobile({ margin: "20px 0px" })}
 `;
 
 const ProductAmountContainer = styled.div`

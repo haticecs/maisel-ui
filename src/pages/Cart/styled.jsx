@@ -1,20 +1,25 @@
 import styled from "styled-components";
+import { mobile } from "../../responsive";
 
 const Container = styled.div``;
+
 const Wrapper = styled.div`
   padding: 20px 10px;
 `;
+
 const Title = styled.h1`
   font-weight: 300;
   font-size: 36px;
   text-align: center;
 `;
+
 const Top = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
 `;
+
 const TopButton = styled.button`
   background-color: ${(props) =>
     props.type === "filled" ? "black" : "transparent"};
@@ -26,7 +31,9 @@ const TopButton = styled.button`
   cursor: pointer;
 `;
 
-const TopTextsContainer = styled.div``;
+const TopTextsContainer = styled.div`
+  ${mobile({ display: "none" })}
+`;
 
 const TopText = styled.span`
   text-decoration: underline;
@@ -37,6 +44,7 @@ const TopText = styled.span`
 const Bottom = styled.div`
   display: flex;
   padding: 20px 10px;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 /*Left part of the bottom*/
@@ -61,6 +69,7 @@ const OrderSummary = styled.div`
   border: 1px solid lightgray;
   border-radius: 10px;
   height: 50vh;
+  ${mobile({ height: "40vh", flex: "none" })}
 `;
 
 const SummaryTitle = styled.h1`

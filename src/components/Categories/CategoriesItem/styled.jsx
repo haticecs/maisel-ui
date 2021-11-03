@@ -1,17 +1,23 @@
 import styled from "styled-components";
+import { mobile } from "../../../responsive";
 
-export const Container = styled.div`
+const Container = styled.div`
   flex: 1;
   margin: 3px;
   height: 70vh;
   position: relative;
 `;
-export const Image = styled.img`
+
+const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  ${mobile({
+    height: "30vh",
+  })}
 `;
-export const Info = styled.div`
+
+const Info = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -22,11 +28,13 @@ export const Info = styled.div`
   justify-content: center;
   flex-direction: column;
 `;
-export const Title = styled.h1`
+
+const Title = styled.h1`
   color: white;
   margin-bottom: 20px;
 `;
-export const Button = styled.button`
+
+const Button = styled.button`
   border: none;
   padding: 10px;
   background-color: white;
@@ -34,3 +42,5 @@ export const Button = styled.button`
   font-weight: 600;
   cursor: pointer;
 `;
+
+export { Container, Image, Info, Title, Button };

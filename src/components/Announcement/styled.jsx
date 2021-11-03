@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { mobile } from "../../responsive";
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -9,4 +9,8 @@ export const Container = styled.div`
   color: white;
   font-size: 14px;
   font-weight: 500;
+  ${mobile({
+    padding: "5px",
+    fontSize: "12px",
+  })}
 `;

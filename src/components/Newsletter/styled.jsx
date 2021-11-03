@@ -1,42 +1,49 @@
 import styled from "styled-components";
+import { mobile } from "../../responsive";
 
-export const Container = styled.div`
+const Container = styled.div`
   height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: #fcf1ed;
+
+  ${mobile({ height: "50vh" })}
 `;
 
-export const Title = styled.h1`
+const Title = styled.h1`
   font-size: 70px;
   letter-spacing: 1px;
   margin-bottom: 20px;
+  ${mobile({ fontSize: "50px" })}
 `;
 
-export const Desc = styled.div`
+const Desc = styled.div`
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 30px;
+  ${mobile({ textAlign: "center" })}
 `;
 
-export const InputContainer = styled.div`
+const InputContainer = styled.div`
   display: flex;
   width: 50%;
   height: 40px;
   border: 1px solid lightgray;
   cursor: pointer;
+  ${mobile({ justifyContent: "center", width: "80%" })}
 `;
 
-export const Input = styled.input`
+const Input = styled.input`
   border: none;
   flex: 8;
   padding-left: 20px;
   font-size: 20px;
+  ${mobile({ paddingLeft: "10px", fontSize: "18px" })}
 `;
 
-export const Button = styled.button`
+const Button = styled.button`
   display: flex;
   flex: 1;
   justify-content: center;
@@ -51,3 +58,5 @@ export const Button = styled.button`
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 `;
+
+export { Container, Title, Desc, InputContainer, Input, Button };
