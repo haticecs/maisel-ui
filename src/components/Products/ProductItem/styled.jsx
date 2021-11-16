@@ -24,7 +24,7 @@ const Container = styled.div`
   margin: 5px;
   height: 350px;
   min-width: 280px;
-  background-color: #e6ffe6;
+  background-color: #fbf0f4;
   display: flex;
   justify-content: center;
   align-items: center;
